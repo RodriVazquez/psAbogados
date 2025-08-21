@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
 (function($) {
 
 	var	$window = $(window),
@@ -213,5 +214,22 @@
 				});
 
 		});
+
+
+// Mostrar solo la sección de área de práctica seleccionada
+document.addEventListener('DOMContentLoaded', function() {
+	const radios = document.querySelectorAll('.menu-areasP input[type="radio"]');
+	const tabs = document.querySelectorAll('.content-areasP .tab-areasP');
+	function showTab() {
+		tabs.forEach(tab => tab.style.display = 'none');
+		const checked = document.querySelector('.menu-areasP input[type="radio"]:checked');
+		if (checked) {
+			const tab = document.getElementById('tab-' + checked.id);
+			if (tab) tab.style.display = 'block';
+		}
+	}
+	radios.forEach(radio => radio.addEventListener('change', showTab));
+	showTab(); // Inicial
+});
 
 })(jQuery);
