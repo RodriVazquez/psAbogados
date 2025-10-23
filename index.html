@@ -245,22 +245,26 @@
 							<!-- Contact -->
 							<section class="contact-container">
 								<h3 class="title-contact">Contacto</h3>
-								<form id="contact-form" class="form-contact" role="form">
-										
-									<input type="text" class="ph-control" id="name" placeholder="Nombre completo" name="name" value="" required>
-									
-									<input type="email" class="ph-control" id="email" placeholder="Email" name="email" value="" required>
-									
-									<input type="text"  inputmode="tel" pattern="[0-9]*" class="ph-control" id="tel" placeholder="Teléfono (solo números)" name="tel" value="" required>
+								<form action="https://formsubmit.co/rodriivaz123@gmail.com" method="POST" id="contact-form" class="form-contact" role="form">
+									<!-- FormSubmit recommended hidden inputs -->
+									<input type="hidden" name="_captcha" value="false">
+									<input type="hidden" name="_replyto" value="Email">
+									<input type="hidden" name="_subject" value="Nuevo contacto desde web - Parodi & Asociados">
 
-									<input type="text" class="ph-control" id="organizacion" placeholder="Organización" name="organizacion" value="" required>
+									<input type="text" class="ph-control" id="name" placeholder="Nombre completo" name="Nombre" value="" required>
 
-									<input type="text" class="ph-control" id="localidad" placeholder="Localidad" name="localidad" value="" required>
+									<input type="email" class="ph-control" id="email" placeholder="Email" name="Email" value="" required>
 
-									<input type="text" class="ph-control" id="asunto" placeholder="Asunto" name="asunto" value="" required>
+									<input type="text"  inputmode="tel" pattern="[0-9]*" class="ph-control" id="tel" placeholder="Teléfono (solo números)" name="Teléfono" value="" required>
 
-									<textarea class="ph-control" placeholder="Descripción de tu consulta" name="message" required></textarea>
-										
+									<input type="text" class="ph-control" id="organizacion" placeholder="Organización:" name="Organización" value="" required>
+
+									<input type="text" class="ph-control" id="localidad" placeholder="Localidad:" name="Localidad" value="" required>
+
+									<input type="text" class="ph-control" id="asunto" placeholder="Asunto:" name="Asunto" value="" required>
+
+									<textarea class="ph-control" placeholder="Descripción de tu consulta:" name="Mensaje" required></textarea>
+
 									<div class="button-contact">
 										<button class="" id="submit" type="submit" value="SEND">
 											<span class="send-text">Enviar</span>
@@ -293,6 +297,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/form.js"></script>
 
 	</body>
 </html>
